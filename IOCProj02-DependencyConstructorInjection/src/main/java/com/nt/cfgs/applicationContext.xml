@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Dependent spring bean config -->
+    <bean id="Itime" class="java.time.LocalTime" factory-method="now"/>
+    <bean id="Idate" class="java.time.LocalDate" factory-method="now" />
+
+    <!-- Target spring bean config -->
+    <bean id="wmg" class="com.nt.sbeans.WishMessageGenerator">
+        <constructor-arg name="time" ref="Itime"/>
+        <constructor-arg name="date" ref="Idate"/>
+    </bean>
+</beans>

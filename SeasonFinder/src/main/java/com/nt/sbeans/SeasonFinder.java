@@ -5,6 +5,11 @@ import java.time.LocalDate;
 public class SeasonFinder {
 
     private LocalDate month;
+    
+	/*
+	 * public SeasonFinder() {
+	 * System.out.println("SeasonFinder::)-param Constructor"); }
+	 */
 
     // Setter method for Setter Injection
     public void setMonth(LocalDate month) {
